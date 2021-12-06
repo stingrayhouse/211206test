@@ -1,8 +1,11 @@
 1. git version
+git version:: 
+https://i.imgur.com/Ff2KszQ.png
 
-https://imgur.com/a/fdMQtOH
+git 기록 내역
+https://i.imgur.com/u04Yhpd.png
 
-링크 클릭시 이동
+링크 클릭시 이동합니다.
 
 2. github repository
 레파지토리 주소: https://github.com/stingrayhouse/211206test
