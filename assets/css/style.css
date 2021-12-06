@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap');
+body{ font-family:"Noto+Sans+KR"; }
+
+/* 본문영역 1 */
+.bon1 {max-width: 100%; height:500px; background-color: #eeeeee;}
+.bon1 .bon1-inner{max-width: 1200px; margin: 0 auto; padding: 15px;}
+.bon1 .bon1-inner h2{font-size: 14pt; font-weight: 300;}
+
+/* 본문영역 2 */
+.bon2 {max-width: 100%; height:400px;}
+.bon2 .bon2-inner {max-width: 1200px; margin: 0 auto; padding: 15px;}
+.bon2 .bon2-inner h2{font-size: 14pt; font-weight: 300;}
+.bon2 .bon-ul {width: 1200px; height: 200px; display: flex; margin: 0 auto; padding-top: 15px;}
+.bon2 .bon-li1 {width: 600px; height: 300px; background-color: #eeeeee; margin-right: 15px;position: relative;border-radius: 5px;}
+.bon2 .bon-li2 {width: 600px; height: 300px; background-color: #eeeeee;position: relative;border-radius: 5px;}
+
+/* ui구현 */
+.bonli1 {position: absolute; bottom: 0;padding: 5px;}
+.bon-gu1 {font-size: 12pt; padding-left: 5px; padding-bottom: 10px;}
+.bon-ja1 {width: 120px; height: 40px; background-color: skyblue; color: #fff; border-radius: 5px;}
+
+.bonli2 {position: absolute; bottom: 0;padding: 5px;}
+.bon-gu2 {font-size: 12pt; padding-left: 5px; padding-bottom: 10px;}
+.bon-ja2 {width: 120px; height: 40px; background-color: skyblue; color: #fff; border-radius: 5px;}
+
+
+/* 본문영역 3 */
+.bon3 {max-width: 100%;  height:500px; background-color: #eeeeee;}
+.bon3 .bon3-inner{max-width: 1200px; margin: 0 auto; padding: 15px;}
+.bon3 .bon3-inner h2{font-size: 14pt; font-weight: 300;}
+
+/* 팝업1 */
+.modal {position: fixed;top: 0; bottom: 0;  left: 0; right: 0;
+  background-color: rgba(0,0,0,0.5); align-items: center;
+  z-index: 1;  display: flex;  justify-content: center;
+  opacity: 0;  visibility: hidden; transition: all 0.3s ease-in-out;
+}
+.modal .modal-box {position:relative; width: 500px; height:150px;
+  background-color: white;  border-radius: 5px;}
+.modal .modal-box .modal-tit {height:45px;border-radius: 5px 5px 0 0; background-color: skyblue; color: white;
+display: flex ; justify-content: center; align-items: center;}
+.modal .modal-box .modal-content {font-size: 10pt; padding: 15px;}
+.modal .modal-box .modal-close {background-color: skyblue; color: white; 
+  width: 70px; height: 35px;border-radius: 3px;
+  position: absolute; bottom: 10px; left:50%; transform:translateX(-50%); }
+
+  .modal.active {opacity: 1;visibility: visible;}
+
+/* 팝업2 */
+.modal2 {position: fixed;top: 0; bottom: 0;  left: 0; right: 0;
+  background-color: rgba(0,0,0,0.5); align-items: center;
+  z-index: 1;  display: flex;  justify-content: center;
+  opacity: 0;  visibility: hidden; transition: all 0.3s ease-in-out;
+}
+.modal2 .modal2-box {position:relative; width: 500px; height:150px;
+  background-color: white;  border-radius: 5px;}
+.modal2 .modal2-box .modal2-tit {height:45px;border-radius: 5px 5px 0 0; background-color: skyblue; color: white;
+display: flex ; justify-content: center; align-items: center;}
+.modal2 .modal2-box .modal2-content {font-size: 10pt; padding: 15px;}
+.modal2 .modal2-box .modal2-close {background-color: skyblue; color: white; 
+  width: 70px; height: 35px;border-radius: 3px;
+  position: absolute; bottom: 10px; left:50%; transform:translateX(-50%); }
+
+.modal2.active {opacity: 1;visibility: visible;}  
+
+
+/* 반응형 */
+
+@media screen and  (max-width:550px){
+  .bon-ul{display: flex; flex-wrap: wrap; flex-basis: calc(50% - 20px);}
+  .bon2 {height: 700px;}
+  .bon2 .bon-ul {margin-right: 15px; display: flex; width: 500px; }
+  .bon2 .bon-li1 {width: 455px; margin-bottom: 15px;}
+  .bon2 .bon-li2 {width: 455px; }
+
+  .modal .modal-box {width: 100%;}
+  .modal2 .modal2-box {width: 100%;}
+}
